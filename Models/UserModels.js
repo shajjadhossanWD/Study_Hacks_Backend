@@ -1,39 +1,30 @@
 const mongoose = require("mongoose");
 
-const upcomingCourseSchema = new mongoose.Schema(
+const UserSchema = new mongoose.Schema(
     {
         
-        description: {
-            type: String,
-        },
         name: {
             type: String,
         },
         avatar: {
             type: String,
         },
+        email: {
+            type: String,
+        },
+        phone: {
+            type: String,
+        },
+        courseName: {
+            type: String,
+        },
+        date: {
+            type: String,
+        },
+        location: {
+            type: String,
+        },
         duration: {
-            type: String,
-        },
-        language: {
-            type: String,
-        },
-        price: {
-            type: String,
-        },
-        payLink: {
-            type: String,
-        },
-        whatLearn: {
-            type: String,
-        },
-        content: {
-            type: String,
-        },
-        requirements: {
-            type: String,
-        },
-        publishDate: {
             type: String,
         },
        
@@ -43,5 +34,5 @@ const upcomingCourseSchema = new mongoose.Schema(
     }
 );
 
-const model = mongoose.model("upcomingCourse", upcomingCourseSchema);
+const model = mongoose.model("user", UserSchema);
 module.exports = model;

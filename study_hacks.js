@@ -20,12 +20,13 @@ global.__basedir = "./assets/"
 
 
 app.use('/api/v1/admin', require('./Routes/AdminRouter'));
+app.use('/api/v1/user', require('./Routes/UserRouter'));
 app.use('/api/v1/about', require('./Routes/AboutRouter'));
 app.use("/api/v1/blog", require("./Routes/BlogRouter"));
 app.use("/api/v1/courses", require("./Routes/CoursesRouter"));
 app.use("/api/v1/freeResource", require("./Routes/FreeResourceRouter"));
-// app.use("/api/v1/recentPublication", require("./Routes/RecentPublicationRouter"));
-// app.use("/api/v1/upcoming", require("./Routes/UpcomingRouter"));
+app.use("/api/v1/recentPublication", require("./Routes/RecentPublicationRouter"));
+app.use("/api/v1/upcoming", require("./Routes/UpcomingRouter"));
 
 
 
