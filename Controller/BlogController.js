@@ -8,7 +8,7 @@ exports.createBlogs = async (req, res) => {
                 title: req.body.title,
                 description: req.body.description,
                 avatar: req.filename && path,
-               
+                date: req.body.date
             });
 
             const saveData = await Blogs.save();
@@ -18,6 +18,7 @@ exports.createBlogs = async (req, res) => {
                     title: saveData.title,
                     description: saveData.description,
                     avatar: saveData.avatar,
+                    date: saveData.date,
                   
                 },
                 message: "Data created successfully.",
@@ -42,6 +43,7 @@ exports.getBlogsId = async (req, res) => {
                     title: Blogs.title,
                     description: Blogs.description,
                     avatar: Blogs.avatar,
+                    date: Blogs.date,
                 },
             });
     }
@@ -71,6 +73,7 @@ exports.updateBlogs = async (req, res) => {
             const data = {
                 title: req.body.title,
                 description: req.body.description,
+                date: req.body.date,
                 avatar: req.filename && path,
             };
 
@@ -84,6 +87,7 @@ exports.updateBlogs = async (req, res) => {
                     title: saveData.title,
                     description: saveData.description,
                     avatar: saveData.avatar,
+                    date: saveData.date,
                 },
                 message: "Blog has been updated",
             });
